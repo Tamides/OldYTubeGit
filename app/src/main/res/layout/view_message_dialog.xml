@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_black">
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/messageBottomMargin"
+        app:layout_constraintEnd_toEndOf="@id/messageEndMargin"
+        app:layout_constraintStart_toStartOf="@id/messageStartMargin"
+        app:layout_constraintTop_toTopOf="@id/messageTopMargin" />
+
+    <Space
+        android:id="@+id/messageStartMargin"
+        android:layout_width="@dimen/big_margin"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/big_margin"
+        app:layout_constraintBottom_toBottomOf="@id/positive"
+        app:layout_constraintEnd_toStartOf="@id/messageContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/messageContainer" />
+
+    <Space
+        android:id="@+id/messageTopMargin"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/big_margin"
+        app:layout_constraintBottom_toTopOf="@id/messageContainer"
+        app:layout_constraintEnd_toEndOf="@id/messageContainer"
+        app:layout_constraintStart_toStartOf="@id/messageContainer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ScrollView
+        android:id="@+id/messageContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/positive"
+        app:layout_constraintEnd_toStartOf="@id/messageEndMargin"
+        app:layout_constraintStart_toEndOf="@id/messageStartMargin"
+        app:layout_constraintTop_toBottomOf="@id/messageTopMargin">
+
+        <pl.tamides.ytube.views.NormalTextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Message" />
+    </ScrollView>
+
+    <Space
+        android:id="@+id/messageEndMargin"
+        android:layout_width="@dimen/big_margin"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/big_margin"
+        app:layout_constraintBottom_toBottomOf="@id/positive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/messageContainer"
+        app:layout_constraintTop_toTopOf="@id/messageContainer" />
+
+    <Space
+        android:id="@+id/messageBottomMargin"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/big_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/messageContainer"
+        app:layout_constraintStart_toStartOf="@id/messageContainer"
+        app:layout_constraintTop_toBottomOf="@id/positive" />
+
+    <pl.tamides.ytube.views.ButtonView
+        android:id="@+id/positive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        app:layout_constraintBottom_toTopOf="@id/messageBottomMargin"
+        app:layout_constraintEnd_toEndOf="@id/messageContainer"
+        app:layout_constraintTop_toBottomOf="@id/messageContainer"
+        app:textColor="@color/green"
+        tools:text="OK" />
+
+    <pl.tamides.ytube.views.ButtonView
+        android:id="@+id/negative"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintEnd_toStartOf="@id/positive"
+        app:layout_constraintTop_toTopOf="@id/positive"
+        app:textColor="@color/red"
+        tools:text="Cancel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">YTube</string>
+    <string name="ok">OK</string>
+    <string name="you_are_not_logged_in">Jesteś nie zalogowany</string>
+    <string name="log_in">Zaloguj</string>
+    <string name="main">Główna</string>
+    <string name="subscriptions">Subskrypcje</string>
+    <string name="playlists">Playlisty</string>
+    <string name="downloading">Pobieram</string>
+</resources>

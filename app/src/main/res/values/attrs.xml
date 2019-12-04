@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="text" format="string" localization="suggested" />
+    <declare-styleable name="ButtonView">
+        <attr name="textColor" format="reference|color" />
+        <attr name="text" />
+        <attr name="android:text" />
+    </declare-styleable>
+    <declare-styleable name="BaseTextView">
+        <attr name="text" />
+        <attr name="android:text" />
+        <attr name="centerText" format="boolean" />
+        <attr name="toolsCenterText" format="boolean" />
+    </declare-styleable>
+</resources>
